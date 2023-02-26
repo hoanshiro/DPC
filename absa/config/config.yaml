@@ -1,0 +1,25 @@
+dataset:
+  path:
+    train: absa/data/train.jsonl
+    test: absa/data/test.jsonl
+    dev: absa/data/dev.jsonl
+  max_seq_len: 100
+  batch_size:
+    train: 1
+    test: 8
+    dev: 32
+hidden_size: 768
+num_aspect_labels: 21
+num_polarity_labels: 7
+device: "cpu"
+
+vn_core_path: "vncorenlp/VnCoreNLP-1.1.1.jar"
+word2vec_model_path: "absa/data/wiki.vi.model.bin"
+token_type: "RDRSEGMENTER"
+
+
+ASPECT_LABELS: ["O", "B-SCREEN", "B-CAMERA", "B-FEATURES", "B-BATTERY", "B-PERFORMANCE", "B-STORAGE", "B-DESIGN", "B-PRICE",
+                 "B-GENERAL", "B-SER&ACC", "I-SCREEN", "I-CAMERA", "I-FEATURES", "I-BATTERY", "I-PERFORMANCE",
+                 "I-STORAGE", "I-DESIGN", "I-PRICE", "I-GENERAL", "I-SER&ACC"]
+
+POLARITY_LABELS: ["O", "B-NEGATIVE", "I-NEGATIVE", "B-NEUTRAL", "I-NEUTRAL", "B-POSITIVE", "I-POSITIVE"]
